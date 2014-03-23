@@ -1,0 +1,6 @@
+$sc-orange : #f50;
+$sc-black  : #333333;
+
+@mixin sc-orange-gradient {
+  @include background-image(linear-gradient(to top, #ff0200, #ff5200));
+}

@@ -1,0 +1,11 @@
+@import './vendor/bourbon/app/assets/stylesheets/_bourbon';
+
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+body {
+  background: $sc-orange;
+  @include sc-font;
+  color: rgba(255, 255, 255, .9);
+}

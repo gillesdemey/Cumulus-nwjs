@@ -1,0 +1,33 @@
+
+{
+  "name": "node-soundcloud",
+  "version": "0.1.0",
+  "description": "Node webkit soundcloud desktop application",
+  "main": "app://host/index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "soundcloud",
+    "music",
+    "player"
+  ],
+  "window": {
+    "title": "Cummulus",
+    "icon": "images/icon.png",
+    "width": 962,
+    "height": 600,
+    "min_width": 962,
+    "min_height": 600,
+    "resizable": true
+  },
+  "author": "Gilles & Michiel De Mey",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gaze": "^0.5.1"
+  },
+  "dependencies": {
+    "gulp-sass": "^0.7.1"
+  }
+}

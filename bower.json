@@ -1,0 +1,31 @@
+{
+  "name": "node-soundcloud",
+  "version": "0.1.0",
+  "authors": [
+    "Gilles & Michiel De Mey <hello@demey.io>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "souncloud",
+    "player",
+    "music"
+  ],
+  "license": "MIT",
+  "homepage": "http://demey.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery-evergreen": "~0.4.1",
+    "bourbon": "~3.1.8"
+  }
+}
