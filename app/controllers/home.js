@@ -9,8 +9,8 @@ App.Controller.Home = function () {
   }
 
   // collect all json data from soundcloud api
-  var Feed = new App.Collection.Feed();
+  // var Feed = new App.Collection.Feed();
 
-  Feed.fetch();
+  // Feed.fetch();
 
 };

@@ -1,3 +1,19 @@
+.button.connect {
+  background: url('../images/connect.png') no-repeat;
+  height: 29px;
+  width: 124px;
+  display: inline-block; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+body.not-connected {
+  background-image: url('../images/unsplash-kitsune-4-blurred.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 body {
   background: #f50;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;

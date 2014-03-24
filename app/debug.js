@@ -4,6 +4,8 @@
 
   if (!App.isDebug) return;
 
+  App.window.showDevTools(); // show devTools by default
+
   var Gaze = require('gaze').Gaze;
   var gaze = new Gaze('**/*');
 

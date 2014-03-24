@@ -17,5 +17,6 @@ App.window.focus();
 
 // initialize soundcloud SDK
 SC.initialize({
-  client_id: 'b7d0aa6f5eec5dc20b40fdaf7f70c6f6'
+  client_id: 'b7d0aa6f5eec5dc20b40fdaf7f70c6f6',
+  redirect_uri: 'app://host/callback.html'
 });

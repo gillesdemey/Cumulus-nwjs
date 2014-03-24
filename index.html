@@ -2,14 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/app.css">
   </head>
-  <body>
-    <h1>SoundCloud</h1>
+  <body class="not-connected">
+
+    <div class="intro">
+      <h1>SoundCloud</h1>
+      <a class="button connect" href="#/connect"></a>
+    </div>
+
   </body>
 
   <!-- soundcloud javascript SDK -->
-  <script src="https://connect.soundcloud.com/sdk.js"></script>
+  <script src="http://connect.soundcloud.com/sdk.js"></script>
 
   <!-- load assential dependencies -->
   <script src="vendor/underscore/underscore.js"></script>
@@ -27,6 +33,7 @@
 
   <!-- app controller -->
   <script src="app/controllers/home.js"></script>
+  <script src="app/controllers/connect.js"></script>
 
   <!-- load routes -->
   <script src="app/routers/router.js"></script>
