@@ -1,0 +1,20 @@
+$yiq-dark: #000 !default;
+$yiq-light: #fff !default;
+$yiq-threshold: 128 !default;
+
+
+/**
+ * YIQ function returns the best contrasted color
+ * @param  $color [color to check against]
+ * @return [color]        [either the default dark or default light value]
+ */
+@function yiq-contrast($color) {
+
+  $red   : red($color);
+  $green : green($color);
+  $blue  : blue($color);
+
+  $yiq: (($red * 299) + ($green * 587) + ($blue * 114)) / 1000;
+
+  @return if($yiq >= $yiq-threshold, $yiq-dark, $yiq-light);
+}

@@ -2,15 +2,24 @@
 
 App.Controller.Home = function () {
 
-  console.log('[Home Controller]: Welcome home!');
-
-  if (!App.Page.Home) {
-    App.Page.Home = new App.View.Page({ 'id': 'home' });
-  }
-
   // collect all json data from soundcloud api
-  // var Feed = new App.Collection.Feed();
+  var Popular = new App.Collection.Popular();
+  var Categories = new App.Collection.Categories();
 
-  // Feed.fetch();
+  // fetch categories and build side bar
+  Categories.fetch(function (categories) {
+    new App.View.CategoriesView({
+      el: '.sidebar__categories',
+      categories: categories
+    });
+  });
+
+  // fetch popular tracks and build overview
+  Popular.fetch(function (tracks) {
+    new App.View.AlbumView({
+      el: '.app__main',
+      tracks: tracks
+    });
+  });
 
 };

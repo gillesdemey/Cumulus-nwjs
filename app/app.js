@@ -1,7 +1,10 @@
 'use strict';
 
+var Config = require(process.cwd() + '/app/config/config.json');
+
 var App = {
-  Root       : './',
+  Root       : process.cwd() + '/app',
+  Config     : Config,
   Controller : {},
   View       : {},
   Model      : {},
@@ -14,9 +17,3 @@ App.isDebug = App.gui.App.argv.indexOf('--debug') > -1;
 App.window  = App.gui.Window.get();
 
 App.window.focus();
-
-// initialize soundcloud SDK
-SC.initialize({
-  client_id: 'b7d0aa6f5eec5dc20b40fdaf7f70c6f6',
-  redirect_uri: 'app://host/callback.html'
-});

@@ -3,7 +3,7 @@
 var Router = Backbone.Router.extend({
 
   routes: {
-    'index.html' : App.Controller.Home,
+    '' : App.Controller.Home,
     'home(/:action)' : App.Controller.Home,
     'connect' : App.Controller.Connect
   },

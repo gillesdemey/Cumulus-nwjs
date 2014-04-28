@@ -1,14 +1,22 @@
 'use strict';
 
-App.View.Page = Backbone.View.extend({
-  className: 'page',
+App.View.AlbumView = Backbone.View.extend({
 
-  initialize: function () {
+  template: _.template($('#album_template').html()),
+
+  initialize: function (data) {
+    this.data = data;
     this.render();
   },
 
-  show: function () {
+  render: function () {
+    var html = this.template(this.data);
+    $(this.el).append(html);
+    $('.sidebar__categories').find('li:first-child').addClass('sidebar__category--active');
+  },
 
+  hideLoader: function () {
+    $('.app__loading').hide();
   }
 
 });

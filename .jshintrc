@@ -25,6 +25,7 @@
     "_": false,
     "App": true,
     "Backbone": false,
-    "SC": false
+    "SC": false,
+    "localforage": false
   }
 }

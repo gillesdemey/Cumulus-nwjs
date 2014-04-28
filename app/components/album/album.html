@@ -1,0 +1,129 @@
+<!-- Polymer core file -->
+<link rel="import" href="../../../vendor/polymer/polymer.html">
+
+<!-- font-awesome icon font -->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+
+<!-- Lato font -->
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+<!-- polymer elemnt declaration -->
+<polymer-element name="cumulus-album" attributes="src, cover, author, audio">
+
+<template>
+  <style>
+    .album {
+      position: relative;
+      width: 300px;
+      height: auto;
+      margin: 0 15px 25px 0;
+      display: inline-block;
+    }
+
+    .cover-wrapper:hover .overlay { opacity: 1; }
+
+    .album .cover-wrapper { margin-bottom: 8px; }
+
+    .album img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .overlay {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 300px;
+      height: 300px;
+
+      background: rgba(0,0,0,0.6);
+      color: white;
+
+      opacity: 0;
+      -webkit-transition: all 300ms;
+    }
+
+    .overlay .fa-play,
+    .overlay .fa-pause {
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -40px;
+      margin-left: -40px;
+      width: 80px;
+      height: 80px;
+      border: solid 3px #fff;
+      border-radius: 100%;
+      text-align: center;
+      text-indent: 11px;
+      font-size: 50px;
+      font-family: 'FontAwesome';
+      line-height: 83px;
+      cursor: pointer;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .overlay .fa-pause {
+      text-indent: 2px;
+      font-size: 45px;
+    }
+
+    .meta {
+      display: block;
+      text-align: center;
+      font-family: 'Lato';
+    }
+
+    .meta .author { font-weight: bold; }
+    .meta span { display: block; }
+  </style>
+
+  <div class="album" title="{{title}} by {{author}}">
+
+    <div class="cover-wrapper">
+      <div class="overlay">
+        <div class="controls">
+          <span id="playpause" class="fa-play"></span>
+        </div>
+      </div>
+      <img src="{{cover}}" alt="{{title}} by {{author}}">
+    </div>
+
+    <div class="meta">
+      <span class="author">{{author}}</span>
+      <span class="title">{{title}}</span>
+    </div>
+
+    <audio id="audio" src="{{audio}}"></audio>
+  </div>
+</template>
+
+<script>
+  'use strict';
+
+  Polymer('cumulus-album', {
+    ready: function () {
+      var self = this;
+      this.playpause = this.$.playpause;
+      this.playpause.addEventListener('click', function (e) {
+        self.playPause();
+      });
+    },
+    playPause: function () {
+      var audio = this.$.audio;
+      if (audio.paused) {
+        this.playpause.className = 'fa-pause';
+        audio.play();
+      } else {
+        this.playpause.className = 'fa-play';
+        audio.pause();
+      }
+    }
+  });
+
+</script>
+
+</polymer-element>
