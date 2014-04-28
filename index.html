@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="../vendor/animate.css/animate.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="../vendor/ionicons/css/ionicons.min.css">
 
@@ -45,7 +46,11 @@
 
     <script type="text/template" id="category_template">
       <% _.each(categories, function( category ) { %>
-        <li class="sidebar__category"><a href="/popular/<%= encodeURIComponent(category) %>"><%= category %></a></li>
+        <li class="sidebar__category">
+          <a href="/popular/<%= encodeURIComponent(category) %>">
+            <%= category.title %>
+          </a>
+        </li>
       <% }); %>
     </script>
 

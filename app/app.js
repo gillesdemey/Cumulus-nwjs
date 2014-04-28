@@ -9,7 +9,8 @@ var App = {
   View       : {},
   Model      : {},
   Page       : {},
-  Collection : {}
+  Collection : {},
+  Event      : _.extend({}, Backbone.Events)
 };
 
 App.gui     = require('nw.gui');

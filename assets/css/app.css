@@ -30,6 +30,9 @@ body {
   line-height: 1em; }
 
 /* loading styles */
+.app__loading.app__loading--done {
+  display: none !important; }
+
 .app__loading {
   display: -webkit-box;
   display: -moz-box;
@@ -131,12 +134,14 @@ body {
   margin-left: 200px; }
 
 /* album view */
-cumulus-album .meta {
-  color: #000;
-  white-space: nowrap;
-  line-height: 1.3em; }
-  cumulus-album .meta .author, cumulus-album .meta .title {
-    overflow: hidden;
-    text-overflow: ellipsis; }
-  cumulus-album .meta .author {
-    line-height: 2em; }
+cumulus-album {
+  -webkit-animation: fadeIn 2s; }
+  cumulus-album .meta {
+    color: #000;
+    white-space: nowrap;
+    line-height: 1.3em; }
+    cumulus-album .meta .author, cumulus-album .meta .title {
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    cumulus-album .meta .author {
+      line-height: 2em; }

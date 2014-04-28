@@ -2,6 +2,8 @@
 
 App.Model.Category = Backbone.Model.extend({
 
-  initialize: function () { }
+  initialize: function (category) {
+    this.title = category;
+  }
 
 });

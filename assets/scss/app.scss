@@ -30,140 +30,8 @@ body {
   line-height: 1em;
 }
 
-/* loading styles */
-.app__loading {
-
-  @include box(vertical, center);
-  position: fixed;
-
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0, 0, 0, 0.9);
-
-  .loading__equalizer {
-
-    position: relative;
-
-    margin: 0 auto;
-
-    $margin-right: 5px;
-    $width: 10px;
-
-    $anim-duration: 700ms;
-    $num-bars: 4;
-    $anim-delay: $anim-duration / $num-bars;
-
-    width: ($width + $margin-right) * $num-bars;
-    height: 32px;
-
-    .equalizer__bar {
-
-      position: absolute;
-      bottom: 0;
-      display: inline-block;
-
-      width: $width;
-      background: white;
-
-      -webkit-animation: pulse 700ms ease-out;
-      -webkit-animation-iteration-count: infinite;
-
-      &:nth-child(1) {
-        height: 32px;
-        -webkit-animation-delay: $anim-delay;
-      }
-      &:nth-child(2) {
-        margin-left: $width + $margin-right;
-        height: 16px;
-        -webkit-animation-delay: $anim-delay * 2;
-      }
-      &:nth-child(3) {
-        margin-left: ($width + $margin-right) * 2;
-        height: 24px;
-        -webkit-animation-delay: $anim-delay * 3;
-      }
-      &:nth-child(4) {
-        margin-left: ($width + $margin-right) * 3;
-        height: 8px;
-        -webkit-animation-delay: $anim-delay * 4;
-      }
-    }
-
-  }
-
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    height: 8px;
-  }
-  50% {
-    height: 32px;
-  }
-  100% {
-    height: 8px;
-  }
-}
-
-/* sidebar styles */
-.app__sidebar {
-  float: left;
-
-  margin-left: 24px;
-  width: 150px;
-
-  .sidebar__title {
-    margin-bottom: 15px;
-    color: #FF7700;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1.125em;
-
-    .ion {
-      float: left;
-      margin-top: -4px;
-      margin-right: 7px;
-      font-size: 24px;
-    }
-  }
-
-  .sidebar__categories {
-
-    .sidebar__category {
-      padding-left: 24px;
-      color: #383838;
-      font-size: 13px;
-      line-height: 2rem;
-
-      a { display: block; }
-      a:hover { color: $sc-orange; }
-
-    }
-
-    .sidebar__category--active {
-
-      a {
-        display: inline-block;
-        margin-left: -15px;
-        padding: 0px 15px;
-        border-radius: 32px;
-        background: $sc-orange;
-        color: #fff;
-
-        &:hover { color: #fff; }
-      }
-
-    }
-
-  }
-
-}
+@import "_loader";
+@import "_sidebar";
 
 /* main view styles */
 .app__main {
@@ -173,6 +41,8 @@ body {
 
 /* album view */
 cumulus-album {
+
+  -webkit-animation: fadeIn 2s;
 
   .meta {
     color: #000;

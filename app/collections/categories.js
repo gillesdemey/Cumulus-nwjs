@@ -17,6 +17,7 @@ App.Collection.Categories = Backbone.Collection.extend({
     localforage.getItem('cumulus.categories').then(function (categories) {
 
       if (typeof callback !== 'undefined' && categories !== null) {
+        categories = new App.Collection.Categories(categories);
         callback(categories);
         return;
       }
@@ -27,9 +28,10 @@ App.Collection.Categories = Backbone.Collection.extend({
         if (err) throw err;
 
         var categories = normalizeCategories(resp.categories.music);
-        collection.set(categories);
-
         localforage.setItem('cumulus.categories', categories);
+
+        categories = new App.Collection.Categories(categories);
+        collection.set(categories);
 
         if (typeof callback !== 'undefined') callback(categories);
 
@@ -44,8 +46,6 @@ App.Collection.Categories = Backbone.Collection.extend({
       });
     }
 
-  },
-
-  sync: Backbone.localforage.sync('cumulus.categories')
+  }
 
 });

@@ -10,16 +10,20 @@ App.Controller.Home = function () {
   Categories.fetch(function (categories) {
     new App.View.CategoriesView({
       el: '.sidebar__categories',
-      categories: categories
+      collection: categories
     });
   });
 
   // fetch popular tracks and build overview
   Popular.fetch(function (tracks) {
+
     new App.View.AlbumView({
       el: '.app__main',
-      tracks: tracks
+      collection: tracks
     });
+
+    tracks.trigger('loaded');
+
   });
 
 };

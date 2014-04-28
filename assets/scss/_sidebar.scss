@@ -1,0 +1,54 @@
+/* sidebar styles */
+
+.app__sidebar {
+  float: left;
+
+  margin-left: 24px;
+  width: 150px;
+
+  .sidebar__title {
+    margin-bottom: 15px;
+    color: #FF7700;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.125em;
+
+    .ion {
+      float: left;
+      margin-top: -4px;
+      margin-right: 7px;
+      font-size: 24px;
+    }
+  }
+
+  .sidebar__categories {
+
+    .sidebar__category {
+      padding-left: 24px;
+      color: #383838;
+      font-size: 13px;
+      line-height: 2rem;
+
+      a { display: block; }
+      a:hover { color: $sc-orange; }
+
+    }
+
+    .sidebar__category--active {
+
+      a {
+        display: inline-block;
+        margin-left: -15px;
+        padding: 0px 15px;
+        border-radius: 32px;
+        background: $sc-orange;
+        color: #fff;
+
+        &:hover { color: #fff; }
+      }
+
+    }
+
+  }
+
+}
