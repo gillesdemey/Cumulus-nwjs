@@ -25,10 +25,10 @@
   "author": "Gilles & Michiel De Mey",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.5.6",
     "gaze": "^0.5.1",
     "grunt": "^0.4.4",
     "grunt-node-webkit-builder": "^0.1.20",
+    "gulp": "^3.6.2",
     "node-webkit-builder": "0.0.1"
   },
   "dependencies": {
