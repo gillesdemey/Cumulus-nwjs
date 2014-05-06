@@ -38,5 +38,5 @@ The node-webkit app will automatically reload when a file has changed. Gulp will
 * [Backbone](http://backbonejs.org/)
 * [Bourbon](http://bourbon.io/)
 * [Gulp](http://gulpjs.com/)
-* [jQuery Evergreen](http://webpro.github.io/jquery-evergreen/)
+* [DOMtastic](http://webpro.github.io/DOMtastic/)
 * [libsass](http://libsass.org)
