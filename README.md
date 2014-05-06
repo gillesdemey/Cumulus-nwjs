@@ -35,6 +35,7 @@ The node-webkit app will automatically reload when a file has changed. Gulp will
 ##Technology stack:
 
 * [Node Webkit](https://github.com/rogerwang/node-webkit/)
+* [Polymer](http://www.polymer-project.org/)
 * [Backbone](http://backbonejs.org/)
 * [Bourbon](http://bourbon.io/)
 * [Gulp](http://gulpjs.com/)
