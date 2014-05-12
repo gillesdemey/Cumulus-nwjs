@@ -3,6 +3,7 @@ Cumulus
 
 SoundCloud desktop application.
 
+![http://f.cl.ly/items/181k3N1j011x1S3H2q0v/Screen%20Shot%202014-05-12%20at%2012.06.22%20AM.png](http://f.cl.ly/items/181k3N1j011x1S3H2q0v/Screen%20Shot%202014-05-12%20at%2012.06.22%20AM.png)
 
 Quick start:
 -----
